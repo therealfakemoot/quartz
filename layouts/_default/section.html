@@ -12,8 +12,9 @@
         {{with .Params.description}}
             <p>{{.}}</p>
         {{end}}
+
+        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
         {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
-        {{ template "_internal/pagination.html" .}}
     </article>
     {{partial "contact.html" .}}
 </div>
