@@ -3,5 +3,5 @@ title: words and things
 enableToc: false
 ---
 
-{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-{{ template "_default/section.html" . }}
+this is the content of the index page
+
