@@ -4,4 +4,4 @@ enableToc: false
 ---
 
 {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-{{ template "section.html" . }}
+{{ template "_default/section.html" . }}
