@@ -10,8 +10,6 @@
     <article>
         {{partial "toc.html" .}}
         {{partial "textprocessing.html" . }}
-        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-        {{ template "_default/section.html" . }}
         {{if $.Site.Data.config.enableRecentNotes}}
           {{partial "recent.html" . }}
         {{end}}
