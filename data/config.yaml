@@ -9,7 +9,7 @@ enableCallouts: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
-enableRecentNotes: false
+enableRecentNotes: true
 enableGitHubEdit: true
 enableMermaid: true
 GitHubLink: https://github.com/therealfakemoot/quartz/tree/hugo/content
@@ -23,6 +23,6 @@ page_title:
   "form and function"
 links:
   - link_name: Mastodon
-    link: therealfakemoot@techhub.social
+    link: https://techhub.social/@therealfakemoot
   - link_name: GitHub
     link: https://github.com/therealfakemoot
