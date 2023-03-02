@@ -1,6 +1,5 @@
 baseURL = "https://blog.ndumas.com"
 languageCode = "en-us"
-enableRecentNotes = true
 pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
