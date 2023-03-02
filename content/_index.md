@@ -1,7 +1,9 @@
 ---
 title: words and things
-enableToc: false
+enableToc: true
 ---
 
-this is the content of the index page
+# Welcome
 
+# Recent Posts
+{{partial "recent.html" . }}
