@@ -9,8 +9,16 @@
     {{partial "header.html" .}}
     <article>
       {{if .Title}}<h1>{{ .Title }}</h1>{{end}}
+      {{- if .Params.series -}}
+        {{- with index (.GetTerms "series") 0 -}}
+            <div class="notice--info">
+                    <p>This post is part of the <a href="{{ .Permalink }}" style="font-weight: bold">{{ .LinkTitle }}</a> series.</p>
+            </div>
+        {{- end -}}
+      {{- end -}}
+
       <p class="meta">
-        {{ i18n "last_updated" }} {{ partial "date-fmt.html" .}} 
+        {{ i18n "last_updated" }} {{ partial "date-fmt.html" .}}
           {{ partial "github.html" . }}
       </p>
       <ul class="tags">
