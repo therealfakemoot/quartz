@@ -54,5 +54,5 @@
 }
 
 .glyph--grey {
-    @include glyph(var(--primary))
+    @include glyph(var(--secondary))
 }
