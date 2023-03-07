@@ -3,12 +3,12 @@
     {{ with .Prev }}
       <a href="{{ .Permalink }}" class="button previous">
         <span class="button__icon">←</span>
-        <span class="button__text">{{ $.Site.Params.newerPosts | default "Newer posts" }}</span>
+        <span class="button__text">{{ $.Site.Params.newerPosts | default "Previous post" }}</span>
       </a>
     {{end}}
     {{ with .Next }}
       <a href="{{ .Permalink }}" class="button next">
-        <span class="button__text">{{ $.Site.Params.olderPosts | default "Older posts" }}</span>
+        <span class="button__text">{{ $.Site.Params.olderPosts | default "Next post" }}</span>
         <span class="button__icon">→</span>
       </a>
     {{end}}
