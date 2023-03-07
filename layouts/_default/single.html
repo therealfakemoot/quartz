@@ -56,7 +56,7 @@
   </div>
 	{{- end -}}
     {{ $paginator := .Paginate (where .Pages "Type" "posts")}}
-    {{partial "pagination.html" .}}
+    {{partial "pagination.html" $paginator}}
     {{partial "footer.html" .}}
 </div>
 </body>
