@@ -52,5 +52,5 @@
 }
 
 .glyph--grey {
-    @include glyph(var(--light))
+    @include glyph(var(--tertiary))
 }
