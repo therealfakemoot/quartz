@@ -49,6 +49,8 @@
 
 @mixin glyph($glyph-color) {
     color: $glyph-color;
+    font-weight: bold;
+    text-transform: full-width;
 }
 
 .glyph--grey {
