@@ -1,13 +1,12 @@
 <div class="pagination">
   <div class="pagination__buttons">
-    {{ if .HasPrev }}
-      <a href="{{ .Prev.URL }}" class="button previous">
+      <a href="{{ .PrevInSection }}" class="button previous">
         <span class="button__icon">←</span>
         <span class="button__text">{{ $.Site.Params.newerPosts | default "Newer posts" }}</span>
       </a>
     {{ end }}
-    {{ if .HasNext }}
-      <a href="{{ .Next.URL }}" class="button next">
+    {{ if .Paginator.HasNext }}
+      <a href="{{ .NextInSection }}" class="button next">
         <span class="button__text">{{ $.Site.Params.olderPosts | default "Older posts" }}</span>
         <span class="button__icon">→</span>
       </a>
