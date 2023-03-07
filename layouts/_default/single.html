@@ -29,9 +29,6 @@
       {{partial "toc.html" .}}
       {{partial "textprocessing.html" . }}
     </article>
-    {{- if .Params.series -}}
-  <div class="post-series">
-    {{- $series := where .Site.RegularPages.ByDate ".Params.series" "intersect" .Params.series -}}
     {{partial "prev-next.html" .}}
     {{partial "footer.html" .}}
 </div>

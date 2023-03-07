@@ -2,6 +2,8 @@
     {{- with index (.GetTerms "series") 0 -}}
         <div class="notice--info">
                 <p>This post is part of the <a href="{{ .Permalink }}" style="font-weight: bold">{{ .LinkTitle }}</a> series.</p>
+  <div class="post-series">
+    {{- $series := where .Site.RegularPages.ByDate ".Params.series" "intersect" .Params.series -}}
     {{- with $series -}}
     <h3 id="series">This series</h3>
     <ol>
@@ -17,7 +19,6 @@
     </ol>
     {{- end -}}
   </div>
-	{{- end -}}
-        </div>
+
     {{- end -}}
 {{- end -}}
