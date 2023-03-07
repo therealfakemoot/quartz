@@ -46,3 +46,9 @@
 .notice--info {
     @include notice(#8ebeeb);
 }
+
+.glyph {
+    color: $light;
+    text-emphasis: filled red;
+    text-decoration: dotted red;
+}
