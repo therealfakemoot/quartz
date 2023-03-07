@@ -2,17 +2,17 @@
 <div class="pagination">
     <li class="pagination__buttons">
         {{ if .PrevInSection }}
-        <ul class="button previous">
+        <ul class="button next">
             <a href="{{ .PrevInSection.Permalink }}">
                 <span class="button__text">{{ .PrevInSection.Title }}</span>
-                <span class="button__icon">→</span>
+                <span class="button__icon">←</span>
             </a>
         </ul>
         {{ end }}
         {{ if .NextInSection }}
-        <ul class="button next">
+        <ul class="button previous">
             <a href="{{ .NextInSection.Permalink }}">
-                <span class="button__icon">←</span>
+                <span class="button__icon">→</span>
                 <span class="button__text">{{ .NextInSection.Title }}</span>
             </a>
         </ul>
