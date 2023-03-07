@@ -49,10 +49,8 @@
 
 @mixin glyph($glyph-color) {
     color: $glyph-color;
-    text-emphasis: filled red;
-    text-decoration: dotted red;
 }
 
 .glyph--grey {
-    @include glyph(#4e4e4e)
+    @include glyph(var(--light))
 }
