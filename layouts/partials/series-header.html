@@ -5,7 +5,7 @@
 
 </div>
     {{- end -}}
-    <div class="post-series">
+    <div class="post-series notice--info">
     {{- $series := where .Site.RegularPages.ByDate ".Params.series" "intersect" .Params.series -}}
     {{- with $series -}}
         <h3 id="series">This series</h3>
