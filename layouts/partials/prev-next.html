@@ -9,6 +9,11 @@
             </a>
         </li>
         {{ end }}
+        {{ if and .NextInSection .PrevInSection }}
+        <li>
+            |||
+        </li>
+        {{ end }}
         {{ if .NextInSection }}
         <li>
             <a href="{{ .NextInSection.Permalink }}">
