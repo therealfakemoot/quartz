@@ -1,22 +1,22 @@
 {{ if or .NextInSection .PrevInSection }}
 <div class="pagination">
-    <li class="pagination__buttons">
+    <ul class="pagination__buttons">
         {{ if .PrevInSection }}
-        <ul class="button next bouncy" role="button">
+        <li class="button next bouncy" role="button">
             <a href="{{ .PrevInSection.Permalink }}">
                 <span class="button__icon">←</span>
                 <span class="button__text">{{ .PrevInSection.Title }}</span>
             </a>
-        </ul>
+        </li>
         {{ end }}
         {{ if .NextInSection }}
-        <ul class="button previous bouncy" role="button">
+        <li class="button previous bouncy" role="button">
             <a href="{{ .NextInSection.Permalink }}">
                 <span class="button__text">{{ .NextInSection.Title }}</span>
                 <span class="button__icon">→</span>
             </a>
-        </ul>
+        </li>
         {{ end }}
-    </li>
+    </ul>
 </div>
 {{ end }}
