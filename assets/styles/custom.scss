@@ -44,7 +44,7 @@
 }
 
 .notice--info {
-    @include notice(var(--secondary));
+    @include notice(var(--primary));
 }
 
 @mixin glyph($glyph-color) {
