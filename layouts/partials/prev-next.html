@@ -2,7 +2,7 @@
 <nav class="pagination">
     {{ if .PrevInSection }}
     <ol>
-        <li class="button next bouncy" role="button">
+        <li>
             <a href="{{ .PrevInSection.Permalink }}">
                 <span class="button__icon">←</span>
                 <span class="button__text">{{ .PrevInSection.Title }}</span>
@@ -10,7 +10,7 @@
         </li>
         {{ end }}
         {{ if .NextInSection }}
-        <li class="button previous bouncy" role="button">
+        <li>
             <a href="{{ .NextInSection.Permalink }}">
                 <span class="button__text">{{ .NextInSection.Title }}</span>
                 <span class="button__icon">→</span>
