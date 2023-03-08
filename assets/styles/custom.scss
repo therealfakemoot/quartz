@@ -71,16 +71,21 @@
 		 text-align:center;
 		 transition: all 0.2s;
 }
+
 .button:hover{
 		 color:#000000;
 		 background-color:#FFFFFF;
 }
+
+/*
+hope this isn't too important
 @media all and (max-width:30em){
 		 .button{
 				  display:block;
 				  margin:0.4em auto;
 		 }
 }
+*/
 
 .bouncy{
  animation:bouncy 5s infinite linear;
