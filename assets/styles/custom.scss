@@ -47,41 +47,9 @@
     @include notice(var(--primary));
 }
 
-@mixin glyph($glyph-color) {
-    color: $glyph-color;
-    font-weight: bold;
-    text-transform: full-width;
+nav.pagination {
+		border: 1px solid black;
+		li {
+				display: inline-block;
+		}
 }
-
-.glyph--grey {
-    @include glyph(var(--secondary))
-}
-
-.button{
- display:inline-block;
- padding:0.35em 1.2em;
- border:0.1em solid #FFFFFF;
- margin:0 0.3em 0.3em 0;
- border-radius:0.12em;
- box-sizing: border-box;
- text-decoration:none;
- font-family:'Roboto',sans-serif;
- font-weight:300;
- color:#FFFFFF;
- text-align:center;
- transition: all 0.2s;
-}
-.button:hover{
- color:#000000;
- background-color:#FFFFFF;
-}
-
-/*
-something about the margin line is broken and i don't care enough to fix it
-@media all and (max-width:30em){
- .button{
-  display:block;
-  margin:0.4em auto;
- }
-}
-*/
