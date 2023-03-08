@@ -49,6 +49,9 @@
 
 nav.pagination {
 		border: 1px solid black;
+		ol {
+			padding-inline-start: 0px; // this is set to 40px by my Chrome's user agent stylesheet for some reason
+		}
 		li {
 				display: inline-block;
 		}
