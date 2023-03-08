@@ -57,42 +57,45 @@
     @include glyph(var(--secondary))
 }
 
-
 /* CSS */
 .button {
-  align-items: center;
-  background: var(--secondary);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
   box-sizing: border-box;
-  color: var(--primary);
+  color: #39739d;
   cursor: pointer;
-  display: flex;
-  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
-  font-size: 1rem;
-  justify-content: center;
-  line-height: 1.5rem;
-  padding: 15px;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
   position: relative;
-  text-align: left;
-  transition: .2s;
+  text-align: center;
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: pre;
-  width: max-content;
-  word-break: normal;
-  word-spacing: normal;
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
-.button:hover {
-  background: #f8f8ff;
-  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+.button:hover,
+.button:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
 }
 
-@media (min-width: 768px) {
-  .button {
-    padding: 24px;
-  }
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
 }
