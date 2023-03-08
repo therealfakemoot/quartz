@@ -49,5 +49,7 @@
 
 nav.pagination {
 		border: 1px solid black;
-		display: inline-block;
+		li {
+				display: inline-block;
+		}
 }
