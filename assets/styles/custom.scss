@@ -1,101 +1,98 @@
 // Add your own CSS here!
 
 :root {
-  --light: #faf8f8;
-  --dark: #141021;
-  --secondary: #284b63;
-  --tertiary: #84a59d;
-  --visited: #afbfc9;
-  --primary: #f28482;
-  --gray: #4e4e4e;
-  --lightgray: #f0f0f0;
-  --outlinegray: #dadada;
-  --million-progress-bar-color: var(--secondary);
-  --highlighted: #f5dfaf88;
+		--light: #faf8f8;
+		--dark: #141021;
+		--secondary: #284b63;
+		--tertiary: #84a59d;
+		--visited: #afbfc9;
+		--primary: #f28482;
+		--gray: #4e4e4e;
+		--lightgray: #f0f0f0;
+		--outlinegray: #dadada;
+		--million-progress-bar-color: var(--secondary);
+		--highlighted: #f5dfaf88;
 }
 
 [saved-theme="dark"] {
-  --light: #1e1e21 !important;
-  --dark: #fbfffe !important;
-  --secondary: #6b879a !important;
-  --visited: #4a575e !important;
-  --tertiary: #84a59d !important;
-  --primary: #f58382 !important;
-  --gray: #d4d4d4 !important;
-  --lightgray: #292633 !important;
-  --outlinegray: #343434 !important;
-  --highlighted: #574010;
+		--light: #1e1e21 !important;
+		--dark: #fbfffe !important;
+		--secondary: #6b879a !important;
+		--visited: #4a575e !important;
+		--tertiary: #84a59d !important;
+		--primary: #f58382 !important;
+		--gray: #d4d4d4 !important;
+		--lightgray: #292633 !important;
+		--outlinegray: #343434 !important;
+		--highlighted: #574010;
 }
 
 // source: https://blog.cavelab.dev/2021/07/hugo-series-taxonomy/
 @mixin notice($notice-color)
 {
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    border-left: 0.5em solid $notice-color;
+		margin: 1em 0;
+		padding: 0.5em 1em;
+		border-left: 0.5em solid $notice-color;
 
-    > *:first-child {
-        margin-top: 0;
-    }
+		> *:first-child {
+				margin-top: 0;
+		}
 
-    > *:last-child {
-        margin-bottom: 0;
-    }
+		> *:last-child {
+				margin-bottom: 0;
+		}
 }
 
 .notice--info {
-    @include notice(var(--primary));
+		@include notice(var(--primary));
 }
 
 @mixin glyph($glyph-color) {
-    color: $glyph-color;
-    font-weight: bold;
-    text-transform: full-width;
+		color: $glyph-color;
+		font-weight: bold;
+		text-transform: full-width;
 }
 
 .glyph--grey {
-    @include glyph(var(--secondary))
+		@include glyph(var(--secondary))
 }
 
-/* CSS */
-.button {
-  background-color: #e1ecf4;
-  border-radius: 3px;
-  border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #39739d;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
+.button{
+		 display:inline-block;
+		 padding:0.35em 1.2em;
+		 border:0.1em solid #FFFFFF;
+		 margin:0 0.3em 0.3em 0;
+		 border-radius:0.12em;
+		 box-sizing: border-box;
+		 text-decoration:none;
+		 font-family:'Roboto',sans-serif;
+		 font-weight:300;
+		 color:#FFFFFF;
+		 text-align:center;
+		 transition: all 0.2s;
+}
+.button:hover{
+		 color:#000000;
+		 background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+		 .button{
+				  display:block;
+				  margin:0.4em auto;
+		 }
 }
 
-.button:hover,
-.button:focus {
-  background-color: #b3d3ea;
-  color: #2c5777;
+.bouncy{
+ animation:bouncy 5s infinite linear;
+ position:relative;
 }
 
-.button:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.button:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #2c5777;
+@keyframes bouncy {
+ 0%{top:0em}
+ 40%{top:0em}
+ 43%{top:-0.9em}
+ 46%{top:0em}
+ 48%{top:-0.4em}
+ 50%{top:0em}
+ 100%{top:0em;}
 }
