@@ -1,6 +1,14 @@
 ---
+<<<<<<< HEAD
 title: words and things
 enableToc: true
+||||||| parent of aa5ab03 (docs: update to account for github changes)
+title: 🪴 Quartz 3.
+enableToc: false
+=======
+title: 🪴 Quartz 3.3
+enableToc: false
+>>>>>>> aa5ab03 (docs: update to account for github changes)
 ---
 
 # Welcome
