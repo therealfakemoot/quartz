@@ -7,7 +7,7 @@
   https://gohugo.io/content-management/related/
   -->
   {{$notes := .Site.RegularPages.ByLastmod.Reverse}}
-  {{$notes := $.Site.GetPage "section" "posts"}}
+  {{$notes := $.Site.GetPage "section" "notes"}}
   {{partial "page-list.html" (first 7 $notes)}}
 </div>
 
