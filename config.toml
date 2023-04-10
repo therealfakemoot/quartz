@@ -26,6 +26,9 @@ copyright = 'This work is licensed under a Creative Commons Attribution-ShareAli
     tag = "tags"
     series = "series"
 
+[[module.imports]]
+path="github.com/future-wd/hugo-svg-font/v2"
+
 [markup]
     [markup.tableOfContents]
         endLevel = 3
