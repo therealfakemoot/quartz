@@ -8,7 +8,9 @@
     </div>
     <div id="rss-feed">
       <a rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
-        <img height="100%" src="/rss.svg" />
+        <svg>
+          <use xlink:href="/rss.svg" />
+        </svg>
       </a>
     </div>
 </header>
