@@ -85,8 +85,8 @@
           TODO: Here is where I need to make image handling smarter. I think I have the page variable so
           I should be able to just get
           -->
-          {{$resourceLink := ($page.Permalink) . "/" . $href}}
-          {{$link := printf "<img src=\"%s\" width=\"%s\" />" $href $width}}
+          {{$resourceLink := printf "%s/%s" $page.Permalink $href}}
+          {{$link := printf "<img src=\"%s\" width=\"%s\" />" $resourceLink $width}}
           {{$content = replace $content . $link}}
         <!-- Video -->
         {{else if in ".mp4 .webm .ogv .mov .mkv" $embed_ext}}
