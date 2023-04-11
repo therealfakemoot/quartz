@@ -85,7 +85,7 @@
           TODO: Here is where I need to make image handling smarter. I think I have the page variable so
           I should be able to just get
           -->
-          {{$resourceLink := $page.Permalink . "/" . $href}}
+          {{$resourceLink := ($page.Permalink) . "/" . $href}}
           {{$link := printf "<img src=\"%s\" width=\"%s\" />" $href $width}}
           {{$content = replace $content . $link}}
         <!-- Video -->
