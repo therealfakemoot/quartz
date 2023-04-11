@@ -81,10 +81,6 @@
         <!-- Image -->
         {{if in ".png .jpg .jpeg .gif .bmp .svg" $embed_ext }}
           {{$width := default "auto" (index $split 1) }}
-          <!--
-          TODO: Here is where I need to make image handling smarter. I think I have the page variable so
-          I should be able to just get
-          -->
           {{$resourceLink := printf "%s/%s" $page.Permalink $href}}
           {{$link := printf "<img src=\"%s\" width=\"%s\" />" $resourceLink $width}}
           {{$content = replace $content . $link}}
