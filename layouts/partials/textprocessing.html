@@ -74,7 +74,7 @@
       {{$splitpath := split $relpath "/"}}
       {{$dirname := first (sub (len $splitpath) 1) $splitpath | path.Join | urlize}}
       {{$basename := index (last 1 $splitpath) 0}}
-      {{$href := printf "/%s $basename}}
+      {{$href := printf "/%s" $basename}}
       <!-- Embedded? -->
       {{if (hasPrefix . "!")}}
         {{ $embed_ext := lower (path.Ext $href) }}
@@ -85,7 +85,8 @@
           TODO: Here is where I need to make image handling smarter. I think I have the page variable so
           I should be able to just get
           -->
-          {{$link := printf "<img src=\" . {{.Page.Permalink}}/%s\" width=\"%s\" />" $href $width}}
+          {{$resourceLink := Page.Permalink . "/" . $href}}
+          {{$link := printf "<img src=\"%s\" width=\"%s\" /> $href $width}}
           {{$content = replace $content . $link}}
         <!-- Video -->
         {{else if in ".mp4 .webm .ogv .mov .mkv" $embed_ext}}
