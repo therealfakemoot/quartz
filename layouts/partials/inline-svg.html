@@ -1,5 +1,5 @@
 {{ $svg := . }}
-{{ $class := print $svg "-icon" }}
+{{ $class := print $svg "-inline-svg" }}
 {{ $match := "<svg (.*)?>(.*)</svg>" }}
 
 {{ $replaceWith := printf `<svg class="%s" ${1}>${2}</svg>` $class }}
