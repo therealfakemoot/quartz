@@ -13,7 +13,7 @@
             <p>{{.}}</p>
         {{end}}
 
-        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+        {{ $paginator := .Paginate (where .Pages "Type" "notes") }}
         {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
     </article>
     {{partial "contact.html" .}}
