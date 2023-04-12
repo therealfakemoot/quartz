@@ -12,6 +12,7 @@
         {{partial "textprocessing.html" . }}
         {{if $.Site.Data.config.enableRecentNotes}}
           {{partial "recentNotes.html" . }}
+          <span>See more <a href="/notes">Posts</span>
         {{end}}
     </article>
     {{partial "footerIndex.html" .}}
