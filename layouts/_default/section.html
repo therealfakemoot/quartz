@@ -15,6 +15,10 @@
 
         {{ $paginator := .Paginate (where .Pages "Type" "notes") }}
         {{partial "page-list.html" .Paginator.Pages.ByLastmod.Reverse }}
+        {{ template "_internal/pagination.html" . }}
+        {{ range .Paginator.Pages }}
+           {{ .Title }}
+       {{ end }}
     </article>
     {{partial "contact.html" .}}
 </div>
