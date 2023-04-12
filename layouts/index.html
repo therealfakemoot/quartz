@@ -12,8 +12,10 @@
         {{partial "textprocessing.html" . }}
         {{if $.Site.Data.config.enableRecentNotes}}
           {{partial "recentNotes.html" . }}
-          <span>See more <a href="/notes">Posts</span>
         {{end}}
+        <div class="meta">
+          <h1>See more <a href="/notes">Posts</h1>
+        </div>
     </article>
     {{partial "footerIndex.html" .}}
 </div>
