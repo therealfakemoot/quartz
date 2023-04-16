@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 baseURL = "https://blog.ndumas.com"
 languageCode = "en-us"
+googleAnalytics = ""
+pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
 ignoreFiles = [
